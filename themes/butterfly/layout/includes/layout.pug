@@ -14,6 +14,7 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
       include ./lantern.pug
   body
     //- if theme.preloader
+    include ./music.pug
     if theme.preloader.enable
       !=partial('includes/loading/loading', {}, {cache: true})
 

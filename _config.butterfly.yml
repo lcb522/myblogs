@@ -157,15 +157,15 @@ cover:
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
     - https://source.fomal.cc/img/default_cover_14.webp
-    - /source/assets/cover/cover0.jpg
-    - /source/assets/cover/cover1.jpg
-    - /source/assets/cover/cover2.jpg
-    - /source/assets/cover/cover3.jpg
-    - /source/assets/cover/cover4.jpg
-    - /source/assets/cover/cover5.jpg
-    - /source/assets/cover/cover6.jpg
-    - /source/assets/cover/cover7.jpg
-    - /source/assets/cover/cover8.jpg
+    - assets/cover/cover0.jpg
+    - assets/cover/cover1.jpg
+    - assets/cover/cover2.jpg
+    - assets/cover/cover3.jpg
+    - assets/cover/cover4.jpg
+    - assets/cover/cover5.jpg
+    - assets/cover/cover6.jpg
+    - assets/cover/cover7.jpg
+    - assets/cover/cover8.jpg
     # ...
 
 # A simple 404 page
@@ -613,7 +613,7 @@ fireworks:
 
 # Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
 click_heart:
-  enable: false
+  enable: true
   mobile: false
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
@@ -711,7 +711,7 @@ aside:
       enable: true
       icon: # fab fa-github
       text: 前往小窝
-      link: https://github.com/fomalhaut1998
+      link: https://github.com/
   card_announcement:
     enable: true
     content: <center><b>--- 主域名 ---<br><a href="https://www.changbin.space" title="此线路部署于Vercel" class="anno_content"><font color="#5ea6e5">changbin.space</font></a><br>--- 网站安卓APP ---<br>🍧<a href="https://lskypro.acozycotage.net/Fomalhaut/Fomalhaut.apk" title="点这里可以下载网站的安卓APP" class="anno_content"><font color="#5ea6e5">点此下载</font></a>🍧</b></center>
@@ -858,7 +858,7 @@ pjax:
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
+  enable: true
   per_page: false
 
 # Snackbar (Toast Notification 彈窗)
@@ -913,6 +913,9 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    - <link rel="stylesheet" href="/source/css/all.css">
+    - <link rel="stylesheet" href="/themes/butterfly/source/css/_custom/aplayer/aplayer.css">
+
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"> # 常规css
     - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"> # 引入组件库(f12)
     # 综合美化模块样式引入
@@ -926,6 +929,11 @@ inject:
     - <style id="menu_shadow"></style> # 菜单发光样式
 
   bottom:
+    # 自定义js
+    # - <script async data-pjax src="/source\js\anzhiyu.js"></script>
+    # - <script async data-pjax src="/source/js/anzhiyufunction.js"></script>
+    # - <script async src="/source/js/anzhiyuOnlyOne.js"></script>
+
     - <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script> # jQuery
     - <script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script> # VUE
     - <script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script> # ElementUI
@@ -1007,8 +1015,8 @@ CDN:
     # flickr_justified_gallery_js: https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.js
     # flickr_justified_gallery_css: https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.css
     aplayer_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css
-    aplayer_js: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js
-    meting_js: https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js
+    aplayer_js: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js
+    meting_js: https://npm.elemecdn.com/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js
     # prismjs_js: https://cdn1.tianli0.top/npm/prismjs@1.1.0/prism.js
     # prismjs_lineNumber_js: https://cdn1.tianli0.top/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
     # prismjs_autoloader: https://cdn1.tianli0.top/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
